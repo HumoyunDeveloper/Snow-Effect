@@ -6,8 +6,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Snow Effect</title>
     <link rel="stylesheet" href="./styles/style.css">
+<style>
+      #goFS {
+        background: none;
+        padding: .9em 1.5em;
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        font-size: 25px;
+        font-weight: bolder;
+        color: white;
+      }
+    </style> 
 </head>
 <body>
+
+    <button id="goFS">To'liq Ekranga O'tish</button>
+    
+    <script>
+       var goFS = document.getElementById("goFS");
+       goFS.addEventListener("click", function() {     
+         const elem = document.documentElement;
+         if (elem.requestFullscreen) {elem.requestFullscreen()}
+       }, false);
+    </script>
     
     <script src="./js/main.js"></script>
 </body>
